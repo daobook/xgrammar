@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../index.rst:2
 msgid "👋 Welcome to XGrammar"
-msgstr ""
+msgstr "👋 欢迎来到XGrammar"
 
 #: ../../index.rst:4
 msgid "`GitHub <https://github.com/mlc-ai/xgrammar>`_"
@@ -45,12 +45,13 @@ msgid ""
 "structured generations. The mission of this project is to bring flexible "
 "zero-overhead structure generation everywhere."
 msgstr ""
+"XGrammar 开源解决方案，旨在实现灵活、便携且快速的结构化生成。该项目的使命是将灵活的无开销结构化生成带到每一个角落。"
 
 #: ../../index.rst:12
 msgid "Quick Start"
-msgstr ""
+msgstr "快速开始"
 
 #: ../../index.rst:14
 msgid "Check out :ref:`quick-start` for quick start examples of using XGrammar."
-msgstr ""
+msgstr "查看 :ref:`quick-start` 部分，获取使用 XGrammar 的快速入门示例。"
 
