@@ -22,7 +22,7 @@ msgstr ""
 #: ../../../../../envs/anaconda3a/envs/ai/lib/python3.12/site-packages/tlcpack_sphinx_addon/_templates/breadcrumbs.html:59
 #: ../../../../../envs/anaconda3a/envs/ai/lib/python3.12/site-packages/tlcpack_sphinx_addon/_templates/breadcrumbs.html:61
 msgid "Edit on GitHub"
-msgstr ""
+msgstr "在 GitHub 编辑"
 
 #: ../../../../../envs/anaconda3a/envs/ai/lib/python3.12/site-packages/tlcpack_sphinx_addon/_templates/breadcrumbs.html:66
 #: ../../../../../envs/anaconda3a/envs/ai/lib/python3.12/site-packages/tlcpack_sphinx_addon/_templates/breadcrumbs.html:68
@@ -71,7 +71,7 @@ msgstr ""
 
 #: ../../../../../envs/anaconda3a/envs/ai/lib/python3.12/site-packages/tlcpack_sphinx_addon/_templates/layout.html:136
 msgid "Documentation Home"
-msgstr ""
+msgstr "文档主页"
 
 #: ../../../../../envs/anaconda3a/envs/ai/lib/python3.12/site-packages/tlcpack_sphinx_addon/_templates/layout.html:143
 msgid "Logo"

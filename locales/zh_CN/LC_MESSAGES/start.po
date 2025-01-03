@@ -21,17 +21,18 @@ msgstr ""
 
 #: ../../start/install.rst:4
 msgid "Installation"
-msgstr ""
+msgstr "安装"
 
 #: ../../start/install.rst:8
 msgid "Table of Contents"
-msgstr ""
+msgstr "目录"
 
 #: ../../start/install.rst:10
 msgid ""
 "XGrammar Python Package can be installed directly from a prebuilt "
 "developer package, or built from source."
 msgstr ""
+"XGrammar Python 包可以直接从预构建的开发包安装，或者从源代码构建。"
 
 #: ../../start/install.rst:17
 msgid "Option 1. Prebuilt Package"

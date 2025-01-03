@@ -44,7 +44,7 @@ jobs:
         run: |
           apt-get update && sudo apt-get upgrade
           pip install --upgrade pip
-          pip install taolib[flows]
+          pip install taolib[flows] sentencepiece
           pip install -r docs/requirements.txt
           invoke doc
       - name: Setup Pages
