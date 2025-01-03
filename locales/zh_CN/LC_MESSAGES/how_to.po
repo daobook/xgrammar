@@ -1,0 +1,375 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, XGrammar Contributors
+# This file is distributed under the same license as the XGrammar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: XGrammar 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-03 18:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../how_to/ebnf_guided_generation.rst:4
+msgid "EBNF-Guided Generation"
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:6
+msgid ""
+"XGrammar enables efficient structured generation. Besides JSON, you can "
+"use an EBNF grammar to guide the generation, providing more flexibility "
+"for customization."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:9
+msgid ""
+"We first go over how to use XGrammar in an LLM engine to achieve this in "
+":ref:`EBNF-Guided Generation in LLM Engines <how-to-ebnf-generation-"
+"engine>`, we then provide an end-to-end JSON generation using XGrammar "
+"with HF ``transformers`` in :ref:`Try out via HF Transformers <how-to-"
+"ebnf-generation-HF>`."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:15
+#: ../../how_to/engine_integration.rst:17 ../../how_to/json_generation.rst:16
+msgid "Install XGrammar"
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:17
+#: ../../how_to/engine_integration.rst:19 ../../how_to/json_generation.rst:18
+msgid ""
+":ref:`XGrammar <installation_prebuilt_package>` is available via pip. It "
+"is always recommended to install it in an isolated conda virtual "
+"environment."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:24
+msgid "EBNF-Guided Generation in LLM Engines"
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:26
+msgid ""
+"In this section, we see how to use XGrammar in an LLM engine to ensure "
+"that the output follows ane EBNF grammar."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:29
+#: ../../how_to/json_generation.rst:30
+msgid ""
+"All code snippets below are actual runnable code as we simulate the LLM "
+"generation."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:31
+#: ../../how_to/engine_integration.rst:31 ../../how_to/json_generation.rst:32
+msgid "First, import necessary libraries for the tutorial."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:40
+#: ../../how_to/json_generation.rst:41
+msgid ""
+"Then, we extract tokenizer info from the LLM we are using with "
+"``xgr.TokenizerInfo``. With the ``tokenizer_info``, instantiate "
+"``xgr.GrammarCompiler`` that will compiler a grammar of your choice."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:56
+msgid ""
+"Then specify an EBNF grammar string. We currently use the GBNF format "
+"(GGML BNF), with the specification `here "
+"<https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md>`__."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:70
+#: ../../how_to/json_generation.rst:97
+msgid ""
+"With the compiled grammar, we can instantiate a ``xgr.GrammarMatcher``, "
+"the main construct we interact with that maintains the state of the "
+"structured generation. We also allocate a bitmask that will be used to "
+"mask logits."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:80
+#: ../../how_to/json_generation.rst:107
+msgid ""
+"Now we simulate a single-request auto-regressive generation. See :ref"
+":`how-to-engine-integration` for batched inference."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:121
+#: ../../how_to/json_generation.rst:148
+msgid "Try out via HF Transformers"
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:123
+#: ../../how_to/json_generation.rst:150
+msgid ""
+"XGrammar can be easily integrate with HF transformers using a "
+"``LogitsProcessor``. Note that this integration mainly aims for "
+"accessibility and may contain extra overhead."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:126
+#: ../../how_to/json_generation.rst:153
+msgid "First, instantiate a model, a tokenizer, and inputs."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:151
+#: ../../how_to/json_generation.rst:178
+msgid "Then construct a ``GrammarCompiler`` and compile the grammar."
+msgstr ""
+
+#: ../../how_to/ebnf_guided_generation.rst:175
+#: ../../how_to/json_generation.rst:196
+msgid "Finally, use ``LogitsProcessor`` to generate with grammar."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:4
+msgid "Integration with LLM Engine"
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:6
+msgid ""
+"XGrammar enables efficient structured generation. In this tutorial, we go"
+" over the key components of XGrammar and how to integrate XGrammar into "
+"an LLM engine."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:9
+msgid ""
+"We first lay out the concepts in :ref:`High-Level Flow <how-to-engine-"
+"integration-flow>`. We then demonstrate how XGrammar enables "
+":ref:`Structured Generation for Batched Inference <how-to-engine-"
+"integration-batched>`."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:13
+msgid ""
+"The code snippets below are actual runnable code as we simulate the LLM "
+"generation."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:26
+msgid "High-Level Flow"
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:28
+msgid ""
+"In this section, we go over the key components of XGrammar when "
+"integrating it into an LLM engine for structured generation."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:41
+msgid "xgr.TokenizerInfo"
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:43
+msgid ""
+"``xgr.TokenizerInfo`` is a per-model construct that encapsulates "
+"tokenizer information, including all its vocabulary. There are several "
+"ways of instantiating it, and the most convenient way is using an "
+"``AutoTokenizer``. Note that for some models, ``AutoConfig.vocab_size`` "
+"can be larger than ``AutoTokenizer.vocab_size`` due to paddings, with the"
+" former being the shape of the model's logits. To be safe, always pass in"
+" the former when instantiating ``xgr.TokenizerInfo``."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:61
+msgid "xgr.GrammarCompiler"
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:63
+msgid ""
+"With an ``xgr.TokenizerInfo``, we can instantiate an "
+"``xgr.GrammarCompiler``. This is a construct that compiles a grammar "
+"according to the model's tokenizer info. Therefore, for each model, you "
+"can use the same ``xgr.GrammarCompiler`` persistently, as it can compile "
+"different grammars for the same ``xgr.TokenizerInfo``. Note that the "
+"``compiler`` behavior can be configured with ``max_threads`` for "
+"multithreading, and ``enable_cache`` (defaults to true) for caching "
+"compiled grammars."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:76
+msgid "xgr.CompiledGrammar"
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:78
+msgid ""
+"Then, using the ``xgr.GrammarCompiler``, we can compile a grammar, with "
+"the result being an ``xgr.CompiledGrammar``. Here we use a built-in JSON "
+"grammar. For other grammars, see :ref:`how-to-json-generation` and :ref"
+":`how-to-ebnf-generation`. Every thing we have seen up to now are per-"
+"model (rather than per-generation)."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:88
+msgid "xgr.GrammarMatcher"
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:90
+msgid ""
+"With the compiled grammar, we can instantiate a ``xgr.GrammarMatcher``. "
+"It is the main construct an LLM engine interacts with that maintains the "
+"state of the structured generation. Note that each request should have "
+"its own ``xgr.GrammarMatcher`` since each has a different generation "
+"state, as we will see in :ref:`how-to-engine-integration-batched`."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:101
+msgid "Bitmasking Logits in Auto-regressive Generation"
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:103
+msgid ""
+"Now we simulate a single-request auto-regressive generation. See later "
+"section for :ref:`how-to-engine-integration-batched`."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:106
+msgid ""
+"First, we pre-allocate a token bitmask with "
+"``xgr.allocate_token_bitmask()``, which is essentially a ``torch.Tensor``"
+" of shape ``(batch_size, vocab_size)``. You can also use your own "
+"implementation for allocating a bitmask."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:110
+msgid ""
+"In each auto-regressive step, we fill the token bitmask according to the "
+"current state of the matcher with "
+"``xgr.GrammarMatcher.fill_next_token_bitmask()``. Then, we apply the "
+"bitmask into the model's logits with "
+"``xgr.apply_token_bitmask_inplace()``, which calls a CUDA kernel if "
+"``logits`` is on CUDA (recommended), otherwise a CPU implementation."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:115
+msgid ""
+"After masking, the logits for illegal tokens are set to negative "
+"infinity, so that we will never sample them. After sampling the token, "
+"update the ``xgr.GrammarMatcher``'s state with "
+"``xgr.GrammarMatcher.accept_token()``. Finally, use  "
+"``xgr.GrammarMatcher.reset()`` to prepare for the next generation."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:160
+msgid "Structured Generation for Batched Inference"
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:162
+msgid ""
+"The code snippets above assume a single request generation. This section "
+"demonstrates how the same concept works with batched generation."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:165
+msgid ""
+"First, follow the exact same steps above for the per-model constructs "
+"``xgr.TokenizerInfo`` and ``xgr.GrammarCompiler``. Say each request needs"
+" to generate a valid JSON."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:188
+msgid ""
+"Now, we need to maintain an ``xgr.GrammarMatcher`` for each request in "
+"the batch, since each has a different generation state. Note that each "
+"request in the batch can follow a different ``xgr.CompiledGrammar``, but "
+"here for simplicity, they are all just following the general JSON "
+"grammar."
+msgstr ""
+
+#: ../../how_to/engine_integration.rst:202
+msgid ""
+"We simulate an auto-regressive generation of batched inference. Note that"
+" here we assume the generation lengths of the two requests are the same "
+"for simplicity. But it should be easy to generalize based on how your "
+"engine supports batched inference. The key difference from single-request"
+" generation is that, in batched-request generation, each request has its "
+"own ``xgr.GrammarMatcher`` to maintain."
+msgstr ""
+
+#: ../../how_to/json_generation.rst:4
+msgid "JSON Generation"
+msgstr ""
+
+#: ../../how_to/json_generation.rst:6
+msgid ""
+"XGrammar enables efficient structured generation. One example structure "
+"is JSON and JSON Schema. In this tutorial, we go over how to use XGrammar"
+" to ensure that an LLM's output is a valid JSON, or adheres to a "
+"customized JSON schema."
+msgstr ""
+
+#: ../../how_to/json_generation.rst:10
+msgid ""
+"We first go over how to use XGrammar in an LLM engine to achieve this in "
+":ref:`JSON Generation in LLM Engines <how-to-json-generation-engine>`, we"
+" then provide an end-to-end JSON generation using XGrammar with HF "
+"``transformers`` in :ref:`Try out via HF Transformers <how-to-json-"
+"generation-HF>`."
+msgstr ""
+
+#: ../../how_to/json_generation.rst:25
+msgid "JSON Generation in LLM Engines"
+msgstr ""
+
+#: ../../how_to/json_generation.rst:27
+msgid ""
+"In this section, we see how to use XGrammar in an LLM engine to ensure "
+"that the output is always a valid JSON."
+msgstr ""
+
+#: ../../how_to/json_generation.rst:57
+msgid ""
+"For JSON generation, there are generally three options for compiling the "
+"grammar: using a built-in JSON grammar, specify JSON schema with a "
+"Pydantic model, or from a JSON schema string. Pick one one of the three "
+"below to run."
+msgstr ""
+
+#: ../../how_to/portable_api.rst:4
+msgid "Portable API"
+msgstr ""
+
+#: ../../how_to/portable_api.rst:6
+msgid ""
+"XGrammar is implemented with a lightweight C++ core that can be "
+"integrated into many platforms. Besides the C++ backend, we also provide "
+"ready-to-use Python and JavaScript/TypeScript libraries."
+msgstr ""
+
+#: ../../how_to/portable_api.rst:9
+msgid ""
+"For the Python library, simply check out the :ref:`Python API Reference "
+"<apixgrammar>`. Below we take a high-level view of the Javascript "
+"library."
+msgstr ""
+
+#: ../../how_to/portable_api.rst:15
+msgid "Javascript SDK for Web-based LLMs"
+msgstr ""
+
+#: ../../how_to/portable_api.rst:17
+msgid ""
+"The JS SDK is designed to be used for LLMs that run in the browser, "
+"including `WebLLM <https://github.com/mlc-ai/web-llm>`__. WebLLM "
+"integrated with XGrammar's JS SDK, ``web-xgrammar``. It uses `emscripten "
+"<https://emscripten.org/>`__ to compile the C++ code into WebAssembly."
+msgstr ""
+
+#: ../../how_to/portable_api.rst:22
+msgid ""
+"To use this SDK, simply run ``npm install @mlc-ai/web-xgrammar``. For "
+"more, see `here <https://github.com/mlc-ai/xgrammar/tree/main/web>`__."
+msgstr ""
+

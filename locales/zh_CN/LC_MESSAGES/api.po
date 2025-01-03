@@ -1,0 +1,941 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, XGrammar Contributors
+# This file is distributed under the same license as the XGrammar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: XGrammar 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-03 18:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../api/python/index.rst:4
+msgid "xgrammar"
+msgstr ""
+
+#: of xgrammar:1
+msgid "**Classes:**"
+msgstr ""
+
+#: of xgrammar:1:<autosummary>:1
+msgid ":py:obj:`CompiledGrammar <xgrammar.CompiledGrammar>`\\ \\(\\)"
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:1 xgrammar:1:<autosummary>:1
+msgid "This is the primary object to store compiled grammar."
+msgstr ""
+
+#: of xgrammar:1:<autosummary>:1
+msgid ":py:obj:`Grammar <xgrammar.Grammar>`\\ \\(\\)"
+msgstr ""
+
+#: of xgrammar.grammar.Grammar:1 xgrammar:1:<autosummary>:1
+msgid ""
+"This class represents a grammar object in XGrammar, and can be used later"
+" in the grammar-guided generation."
+msgstr ""
+
+#: of xgrammar:1:<autosummary>:1
+msgid ""
+":py:obj:`GrammarCompiler <xgrammar.GrammarCompiler>`\\ "
+"\\(tokenizer\\_info\\, \\*\\[\\, ...\\]\\)"
+msgstr ""
+
+#: of xgrammar:1:<autosummary>:1
+msgid "The compiler for grammars."
+msgstr ""
+
+#: of xgrammar:1:<autosummary>:1
+msgid ""
+":py:obj:`GrammarMatcher <xgrammar.GrammarMatcher>`\\ "
+"\\(compiled\\_grammar\\, \\*\\[\\, ...\\]\\)"
+msgstr ""
+
+#: of xgrammar:1:<autosummary>:1
+msgid ""
+"Match the output of the LLM to the specified grammar, then generate the "
+"mask for the next token."
+msgstr ""
+
+#: of xgrammar:1:<autosummary>:1
+msgid ""
+":py:obj:`TokenizerInfo <xgrammar.TokenizerInfo>`\\ "
+"\\(encoded\\_vocab\\[\\, vocab\\_type\\, ...\\]\\)"
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:1 xgrammar:1:<autosummary>:1
+msgid ""
+"The tokenizer info contains the vocabulary, the type of the vocabulary, "
+"and necessary information for the grammar-guided generation."
+msgstr ""
+
+#: of xgrammar:1:<autosummary>:1
+msgid ""
+":py:obj:`VocabType <xgrammar.VocabType>`\\ \\(value\\[\\, names\\, "
+"module\\, qualname\\, ...\\]\\)"
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.vocab_type:1
+#: xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+#: xgrammar:1:<autosummary>:1
+msgid "The type of the vocabulary."
+msgstr ""
+
+#: of xgrammar:1
+msgid "**Functions:**"
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:1:<autosummary>:1
+msgid ""
+":py:obj:`allocate_token_bitmask <xgrammar.allocate_token_bitmask>`\\ "
+"\\(batch\\_size\\, vocab\\_size\\)"
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:1:<autosummary>:1
+msgid "Allocate the bitmask for the next token prediction."
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:1:<autosummary>:1
+msgid ""
+":py:obj:`apply_token_bitmask_inplace "
+"<xgrammar.apply_token_bitmask_inplace>`\\ \\(logits\\, bitmask\\, \\*\\)"
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:1:<autosummary>:1
+msgid "Apply the bitmask to the logits in-place."
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:1:<autosummary>:1
+msgid ""
+":py:obj:`get_bitmask_shape <xgrammar.get_bitmask_shape>`\\ "
+"\\(batch\\_size\\, vocab\\_size\\)"
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:1:<autosummary>:1
+#: xgrammar.matcher.get_bitmask_shape:1
+msgid "Return the shape of the bitmask: (batch_size, ceil(vocab_size / 32))"
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:1:<autosummary>:1
+msgid ""
+":py:obj:`reset_token_bitmask <xgrammar.reset_token_bitmask>`\\ "
+"\\(bitmask\\)"
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:1:<autosummary>:1
+#: xgrammar.matcher.reset_token_bitmask:1
+msgid "Reset the bitmask to the full mask."
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:3
+msgid ""
+"A CompiledGrammar can be used to construct GrammarMatcher to generate "
+"token masks efficiently."
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:8
+msgid ""
+"Do not construct this class directly, instead use "
+":class:`GrammarCompiler` to construct the object."
+msgstr ""
+
+#: of xgrammar.compiler.CompiledGrammar:1 xgrammar.matcher.GrammarMatcher:1
+#: xgrammar.tokenizer_info.TokenizerInfo:1
+msgid "**Attributes:**"
+msgstr ""
+
+#: of xgrammar.CompiledGrammar.grammar:1:<autosummary>:1
+msgid ":py:obj:`grammar <xgrammar.CompiledGrammar.grammar>`\\"
+msgstr ""
+
+#: of xgrammar.CompiledGrammar.grammar:1
+#: xgrammar.CompiledGrammar.grammar:1:<autosummary>:1
+msgid "The original grammar."
+msgstr ""
+
+#: of xgrammar.CompiledGrammar.grammar:1:<autosummary>:1
+msgid ":py:obj:`tokenizer_info <xgrammar.CompiledGrammar.tokenizer_info>`\\"
+msgstr ""
+
+#: of xgrammar.CompiledGrammar.grammar:1:<autosummary>:1
+#: xgrammar.CompiledGrammar.tokenizer_info:1
+msgid "The tokenizer info associated with the compiled grammar."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar:4
+msgid ""
+"The Grammar object supports context-free grammar (CFG). EBNF (extended "
+"Backus-Naur Form) is used as the format of the grammar. There are many "
+"specifications for EBNF in the literature, and we follow the "
+"specification of GBNF (GGML BNF) in "
+"https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar:9
+msgid "When printed, the grammar will be converted to GBNF format."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler:1 xgrammar.grammar.Grammar:1
+#: xgrammar.matcher.GrammarMatcher:1 xgrammar.tokenizer_info.TokenizerInfo:1
+msgid "**Methods:**"
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.builtin_json_grammar:1:<autosummary>:1
+msgid ""
+":py:obj:`builtin_json_grammar <xgrammar.Grammar.builtin_json_grammar>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.builtin_json_grammar:1:<autosummary>:1
+msgid "Get the grammar of standard JSON."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.builtin_json_grammar:1:<autosummary>:1
+msgid ""
+":py:obj:`from_ebnf <xgrammar.Grammar.from_ebnf>`\\ \\(ebnf\\_string\\, "
+"\\*\\[\\, root\\_rule\\_name\\]\\)"
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.builtin_json_grammar:1:<autosummary>:1
+msgid "Construct a grammar from EBNF string."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.builtin_json_grammar:1:<autosummary>:1
+msgid ""
+":py:obj:`from_json_schema <xgrammar.Grammar.from_json_schema>`\\ "
+"\\(schema\\, \\*\\[\\, ...\\]\\)"
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.builtin_json_grammar:1:<autosummary>:1
+msgid "Construct a grammar from JSON schema."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.builtin_json_grammar:1
+msgid ""
+"Get the grammar of standard JSON. This is compatible with the official "
+"JSON grammar specification in https://www.json.org/json-en.html."
+msgstr ""
+
+#: ../../api/python/index.rst
+msgid "返回"
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.builtin_json_grammar:4
+msgid "**grammar** -- The JSON grammar."
+msgstr ""
+
+#: ../../api/python/index.rst
+msgid "返回类型"
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_ebnf:1
+msgid ""
+"Construct a grammar from EBNF string. The EBNF string should follow the "
+"format in "
+"https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md."
+msgstr ""
+
+#: ../../api/python/index.rst
+msgid "参数"
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_ebnf:4
+msgid "The grammar string in EBNF format."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_ebnf:6
+msgid "The name of the root rule in the grammar."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_json_schema:1
+msgid ""
+"Construct a grammar from JSON schema. Pydantic model or JSON schema "
+"string can be used to specify the schema."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_json_schema:4
+msgid ""
+"It allows any whitespace by default. If user want to specify the format "
+"of the JSON, set `any_whitespace` to False and use the `indent` and "
+"`separators` parameters. The meaning and the default values of the "
+"parameters follows the convention in json.dumps()."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_json_schema:8
+msgid "It internally converts the JSON schema to a EBNF grammar."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.compile_json_schema:4
+#: xgrammar.grammar.Grammar.from_json_schema:10
+msgid "The schema string or Pydantic model."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_json_schema:12
+msgid ""
+"Whether to use any whitespace. If True, the generated grammar will ignore"
+" the indent and separators parameters, and allow any whitespace."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_json_schema:15
+msgid ""
+"The number of spaces for indentation. If None, the output will be in one "
+"line.  Note that specifying the indentation means forcing the LLM to "
+"generate JSON strings strictly formatted. However, some models may tend "
+"to generate JSON strings that are not strictly formatted. In this case, "
+"forcing the LLM to generate strictly formatted JSON strings may degrade "
+"the generation quality. See <https://github.com/sgl-"
+"project/sglang/issues/2216#issuecomment-2516192009> for more details."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.compile_json_schema:6
+#: xgrammar.grammar.Grammar.from_json_schema:15
+msgid ""
+"The number of spaces for indentation. If None, the output will be in one "
+"line."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_json_schema:17
+msgid ""
+"Note that specifying the indentation means forcing the LLM to generate "
+"JSON strings strictly formatted. However, some models may tend to "
+"generate JSON strings that are not strictly formatted. In this case, "
+"forcing the LLM to generate strictly formatted JSON strings may degrade "
+"the generation quality. See <https://github.com/sgl-"
+"project/sglang/issues/2216#issuecomment-2516192009> for more details."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.compile_json_schema:8
+#: xgrammar.grammar.Grammar.from_json_schema:24
+msgid ""
+"Two separators used in the schema: comma and colon. Examples: (\",\", "
+"\":\"), (\", \", \": \"). If None, the default separators will be used: "
+"(\",\", \": \") when the indent is not None, and (\", \", \": \") "
+"otherwise."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_json_schema:28
+msgid ""
+"Whether to use strict mode. In strict mode, the generated grammar will "
+"not allow properties and items that is not specified in the schema. This "
+"is equivalent to setting unevaluatedProperties and unevaluatedItems to "
+"false. It also disallows empty JSON objects and arrays.  This helps LLM "
+"to generate accurate output in the grammar-guided generation with JSON "
+"schema."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_json_schema:28
+msgid ""
+"Whether to use strict mode. In strict mode, the generated grammar will "
+"not allow properties and items that is not specified in the schema. This "
+"is equivalent to setting unevaluatedProperties and unevaluatedItems to "
+"false. It also disallows empty JSON objects and arrays."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_json_schema:33
+msgid ""
+"This helps LLM to generate accurate output in the grammar-guided "
+"generation with JSON schema."
+msgstr ""
+
+#: of xgrammar.grammar.Grammar.from_json_schema:37
+msgid "**grammar** -- The constructed grammar."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler:1
+msgid ""
+"The compiler for grammars. It is associated with a certain tokenizer "
+"info, and compiles grammars into CompiledGrammar with the tokenizer info."
+" It allows parallel compilation with multiple threads, and has a cache to"
+" store the compilation result, avoiding compiling the same grammar "
+"multiple times."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler:6
+msgid "The tokenizer info."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler:8
+msgid "The maximum number of threads used to compile the grammar."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler:10
+msgid "Whether to enable the cache."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.clear_cache:1:<autosummary>:1
+msgid ":py:obj:`clear_cache <xgrammar.GrammarCompiler.clear_cache>`\\ \\(\\)"
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.clear_cache:1
+#: xgrammar.compiler.GrammarCompiler.clear_cache:1:<autosummary>:1
+msgid "Clear all cached compiled grammars."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.clear_cache:1:<autosummary>:1
+msgid ""
+":py:obj:`compile_builtin_json_grammar "
+"<xgrammar.GrammarCompiler.compile_builtin_json_grammar>`\\ \\(\\)"
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.clear_cache:1:<autosummary>:1
+#: xgrammar.compiler.GrammarCompiler.compile_builtin_json_grammar:1
+msgid "Get CompiledGrammar from the standard JSON."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.clear_cache:1:<autosummary>:1
+msgid ""
+":py:obj:`compile_json_schema "
+"<xgrammar.GrammarCompiler.compile_json_schema>`\\ \\(schema\\, \\*\\[\\, "
+"...\\]\\)"
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.clear_cache:1:<autosummary>:1
+msgid "Get CompiledGrammar from the specified JSON schema and format."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.compile_builtin_json_grammar:3
+#: xgrammar.compiler.GrammarCompiler.compile_json_schema:17
+msgid "**compiled_grammar** -- The compiled grammar."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.compile_json_schema:1
+msgid ""
+"Get CompiledGrammar from the specified JSON schema and format. The indent"
+" and separators parameters follow the same convention as in json.dumps()."
+msgstr ""
+
+#: of xgrammar.compiler.GrammarCompiler.compile_json_schema:12
+msgid ""
+"Whether to use strict mode. In strict mode, the generated grammar will "
+"not allow properties and items that is not specified in the schema. This "
+"is equivalent to setting unevaluatedProperties and unevaluatedItems to "
+"false."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:1
+msgid ""
+"Match the output of the LLM to the specified grammar, then generate the "
+"mask for the next token. This is the core class in the grammar-guided "
+"generation."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:4
+msgid ""
+"This class maintains a stateful matcher that can accept tokens and "
+"strings, then match them to the specified grammar. The matcher can "
+"provide a bitmask for the next token prediction, so that the output of "
+"the LLM follows the specified grammar. Its state can be reset and rolled "
+"back by tokens. It also provides utilities for jump-forward decoding."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:9
+msgid ""
+"After matching the whole grammar, the matcher will accept a stop token. "
+"The token mask at this time will only allow stop tokens. After accepting "
+"the stop token, the matcher will terminate, then it cannot accept any new"
+" token or generate a new token mask, meaning the generation is finished."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:14
+msgid ""
+"Under the hood, it utilizes a pushdown automaton with backtracking to "
+"match the grammar, with optimizations specific to LLM token mask "
+"generation."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:17
+msgid "The initialization context for the grammar matcher."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:19
+msgid "If not None, the stop tokens to override the ones in the grammar."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:21
+msgid "Whether to terminate the matcher without accepting a stop token."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:23
+msgid ""
+"The maximum number of rollback tokens allowed. The rollback operation is "
+"useful for jump-forward decoding and speculative decoding."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid ""
+":py:obj:`accept_token <xgrammar.GrammarMatcher.accept_token>`\\ "
+"\\(token\\_id\\, \\*\\[\\, debug\\_print\\]\\)"
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.accept_token:1
+#: xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid "Accept one token and update the state of the matcher."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid ""
+":py:obj:`fill_next_token_bitmask "
+"<xgrammar.GrammarMatcher.fill_next_token_bitmask>`\\ \\(bitmask\\[\\, "
+"index\\]\\)"
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid "Fill the bitmask for the next token prediction."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid ""
+":py:obj:`find_jump_forward_string "
+"<xgrammar.GrammarMatcher.find_jump_forward_string>`\\ \\(\\)"
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid "Find the jump-forward string for jump-forward decoding."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid ":py:obj:`is_terminated <xgrammar.GrammarMatcher.is_terminated>`\\ \\(\\)"
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid "Check if the matcher has terminated."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid ":py:obj:`reset <xgrammar.GrammarMatcher.reset>`\\ \\(\\)"
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.reset:1
+#: xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid "Reset the matcher to the initial state."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid ""
+":py:obj:`rollback <xgrammar.GrammarMatcher.rollback>`\\ "
+"\\(\\[num\\_tokens\\]\\)"
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.rollback:1
+#: xgrammar.matcher.GrammarMatcher:1:<autosummary>:1
+msgid "Rollback the matcher to a previous state by several tokens."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.accept_token:1:<autosummary>:1
+msgid ""
+":py:obj:`max_rollback_tokens "
+"<xgrammar.GrammarMatcher.max_rollback_tokens>`\\"
+msgstr ""
+
+#: of xgrammar.GrammarMatcher.max_rollback_tokens:1
+#: xgrammar.matcher.GrammarMatcher.accept_token:1:<autosummary>:1
+msgid "Get the maximum number of rollback tokens allowed."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.accept_token:1:<autosummary>:1
+msgid ":py:obj:`stop_token_ids <xgrammar.GrammarMatcher.stop_token_ids>`\\"
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.accept_token:1:<autosummary>:1
+msgid "The ids of the stop tokens used in the matcher."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.accept_token:3
+msgid "The id of the token to accept."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.accept_token:5
+msgid ""
+"Whether to print information about the internal state of the matcher. "
+"Helpful for debugging."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.accept_token:9
+msgid "**accepted** -- Whether the token is accepted."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.fill_next_token_bitmask:1
+msgid ""
+"Fill the bitmask for the next token prediction. The input bitmask can be "
+"generated by allocate_token_bitmask, and must be on CPU. bitmask[index] "
+"will be filled with the next token bitmask."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.fill_next_token_bitmask:5
+#: xgrammar.matcher.GrammarMatcher.find_jump_forward_string:5
+msgid "This method does not change the matcher state."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.fill_next_token_bitmask:7
+msgid "The bitmask for the next token prediction."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.fill_next_token_bitmask:9
+msgid "The batch id of the bitmask."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.find_jump_forward_string:1
+msgid ""
+"Find the jump-forward string for jump-forward decoding. This is the "
+"longest string that certainly conforms with the current grammar from the "
+"current matcher state. This string can become the output of the LLM "
+"without requiring LLM decoding."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.find_jump_forward_string:7
+msgid "**jump_forward_string** -- The jump-forward string."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.is_terminated:1
+msgid ""
+"Check if the matcher has terminated. If terminate_without_stop_token is "
+"False, the matcher will terminate if it has accepted the stop token. "
+"Otherwise, the matcher will terminate after matching the whole grammar."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.is_terminated:5
+msgid "**terminated** -- Whether the matcher has terminated."
+msgstr ""
+
+#: of xgrammar.GrammarMatcher.max_rollback_tokens:3
+msgid "**max_rollback_tokens** -- The maximum number of rollback tokens."
+msgstr ""
+
+#: of xgrammar.matcher.GrammarMatcher.rollback:3
+msgid ""
+"The number of tokens to rollback. It cannot exceed the current number of "
+"steps, nor can it exceed the specified maximum number of rollback tokens."
+msgstr ""
+
+#: of xgrammar.GrammarMatcher.stop_token_ids:1
+msgid ""
+"The ids of the stop tokens used in the matcher. If specified, the "
+"provided stop tokens will be used. Otherwise, the stop tokens will be "
+"detected from the vocabulary."
+msgstr ""
+
+#: of xgrammar.GrammarMatcher.stop_token_ids:4
+msgid "**stop_token_ids** -- The ids of the stop tokens."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:4
+msgid ""
+"Note that although some tokenizers will encode the tokens in a special "
+"format, e.g. \"<0x1B>\" for \"\" in the ByteFallback tokenizer, and "
+"\"Ġ\" for \" \" in the Byte-Level BPE tokenizer, TokenizerInfo always "
+"decodes the vocabulary to the original format (e.g. \"\" and \" \")."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:9
+msgid ""
+"Also note that some models (e.g. Phi-3 and Deepseek-V2) may pad the "
+"vocabulary to a multiple of 32. In this case, the model's vocab_size is "
+"larger than the tokenizer's vocabulary size. Please pass the model's "
+"vocab_size to the vocab_size parameter in the constructor, because this "
+"information is used to determine the size of the token mask."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:14
+#: xgrammar.tokenizer_info.TokenizerInfo.from_vocab_and_metadata:4
+msgid "The encoded vocabulary of the tokenizer."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:16
+msgid "The type of the vocabulary. See also VocabType."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:18
+#: xgrammar.tokenizer_info.TokenizerInfo.from_huggingface:16
+msgid ""
+"The size of the vocabulary. If not provided, the vocabulary size will be "
+"len(encoded_vocab)."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:20
+#: xgrammar.tokenizer_info.TokenizerInfo.from_huggingface:19
+msgid ""
+"The stop token ids. If not provided, the stop token ids will be auto "
+"detected (but may not be correct)."
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.prepend_space_in_tokenization:1
+#: xgrammar.tokenizer_info.TokenizerInfo:23
+#: xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+msgid ""
+"Whether the tokenizer will prepend a space before the text in the "
+"tokenization process."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+msgid ":py:obj:`decoded_vocab <xgrammar.TokenizerInfo.decoded_vocab>`\\"
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+msgid "The decoded vocabulary of the tokenizer."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+msgid ""
+":py:obj:`prepend_space_in_tokenization "
+"<xgrammar.TokenizerInfo.prepend_space_in_tokenization>`\\"
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+msgid ":py:obj:`special_token_ids <xgrammar.TokenizerInfo.special_token_ids>`\\"
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+msgid "The special token ids."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+msgid ":py:obj:`stop_token_ids <xgrammar.TokenizerInfo.stop_token_ids>`\\"
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.stop_token_ids:1
+#: xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+msgid "The stop token ids."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+msgid ":py:obj:`vocab_size <xgrammar.TokenizerInfo.vocab_size>`\\"
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.vocab_size:1
+#: xgrammar.matcher.allocate_token_bitmask:11
+#: xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+msgid "The size of the vocabulary."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo:1:<autosummary>:1
+msgid ":py:obj:`vocab_type <xgrammar.TokenizerInfo.vocab_type>`\\"
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.decoded_vocab:1:<autosummary>:1
+msgid ":py:obj:`dump_metadata <xgrammar.TokenizerInfo.dump_metadata>`\\ \\(\\)"
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.decoded_vocab:1:<autosummary>:1
+msgid "Dump the metadata of the tokenizer to a json string."
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.decoded_vocab:1:<autosummary>:1
+msgid ""
+":py:obj:`from_huggingface <xgrammar.TokenizerInfo.from_huggingface>`\\ "
+"\\(tokenizer\\, \\*\\[\\, vocab\\_size\\, ...\\]\\)"
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.decoded_vocab:1:<autosummary>:1
+msgid "Construct the tokenizer info from the huggingface tokenizer."
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.decoded_vocab:1:<autosummary>:1
+msgid ""
+":py:obj:`from_vocab_and_metadata "
+"<xgrammar.TokenizerInfo.from_vocab_and_metadata>`\\ \\(encoded\\_vocab\\,"
+" metadata\\)"
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.decoded_vocab:1:<autosummary>:1
+#: xgrammar.tokenizer_info.TokenizerInfo.from_vocab_and_metadata:1
+msgid ""
+"Construct the tokenizer info from the vocabulary and the metadata string "
+"in json format."
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.decoded_vocab:1
+msgid ""
+"The decoded vocabulary of the tokenizer. This converts the tokens in the "
+"LLM's vocabulary back to the original format of the input text. E.g. for "
+"type ByteFallback, the token <0x1B> is converted back to \"\"."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo.dump_metadata:1
+msgid ""
+"Dump the metadata of the tokenizer to a json string. It can be used to "
+"construct the tokenizer info from the vocabulary and the metadata string."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo.from_huggingface:1
+msgid ""
+"Construct the tokenizer info from the huggingface tokenizer. This "
+"constructor supports various tokenizer backends, including the "
+"huggingface fast tokenizer and tiktoken tokenizer. Necessary information "
+"is automatically detected from the tokenizer."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo.from_huggingface:5
+msgid ""
+"Note that some models (e.g. Phi-3 and Deepseek-V2) may pad the vocabulary"
+" to a multiple of 32. In this case, the model's vocab_size is larger than"
+" the tokenizer's vocabulary size. Please pass the model's vocab_size "
+"(this should be defined in the model config) to the vocab_size parameter "
+"in the constructor, because this information is used to determine the "
+"size of the token mask."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo.from_huggingface:11
+msgid ""
+"Some models can have more than one stop token ids, and auto detection may"
+" not find all of them. In this case, you can specify the stop token ids "
+"manually."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo.from_huggingface:14
+msgid "The huggingface tokenizer."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo.from_huggingface:23
+msgid "**tokenizer_info** -- The tokenizer info."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.TokenizerInfo.from_vocab_and_metadata:6
+msgid "The metadata string in json format."
+msgstr ""
+
+#: of xgrammar.TokenizerInfo.special_token_ids:1
+msgid ""
+"The special token ids. Special tokens include control tokens, reserved "
+"tokens, padded tokens, etc. Now it is automatically detected from the "
+"vocabulary."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.VocabType:1
+msgid ""
+"The type of the vocabulary. Used in TokenizerInfo. XGrammar supports "
+"three types of vocabularies:"
+msgstr ""
+
+#: of xgrammar.tokenizer_info.VocabType:4
+msgid "RAW"
+msgstr ""
+
+#: of xgrammar.tokenizer_info.VocabType:5
+msgid ""
+"The vocabulary is in the raw format. The tokens in the vocabulary are "
+"kept in their original form without any processing. This kind of "
+"tokenizer includes the tiktoken tokenizer, e.g. microsoft/Phi-3-small-8k-"
+"instruct, Qwen/Qwen-7B-Chat, etc."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.VocabType:9
+msgid "BYTE_FALLBACK"
+msgstr ""
+
+#: of xgrammar.tokenizer_info.VocabType:10
+msgid ""
+"The vocabulary used in the byte fallback BPE tokenizer. The tokens are "
+"encoded through the byte-fallback conversion. E.g. \"\" -> \"<0x1B>\", "
+"\" apple\" -> \"▁apple\". This kind of tokenizer includes meta-"
+"llama/Llama-2-7b-chat, microsoft/Phi-3.5-mini-instruct, etc."
+msgstr ""
+
+#: of xgrammar.tokenizer_info.VocabType:14
+msgid "BYTE_LEVEL"
+msgstr ""
+
+#: of xgrammar.tokenizer_info.VocabType:15
+msgid ""
+"The vocabulary used in the byte level BPE tokenizer. The tokens are "
+"encoded through the byte-to-unicode conversion, as in "
+"https://github.com/huggingface/transformers/blob/87be06ca77166e6a6215eee5a990ab9f07238a18/src/transformers/models/gpt2/tokenization_gpt2.py#L38-L59"
+msgstr ""
+
+#: of xgrammar.tokenizer_info.VocabType:19
+msgid ""
+"This kind of tokenizer includes meta-llama/Meta-Llama-3-8B-Instruct, "
+"meta-llama/Meta-Llama-3.1-8B-Instruct, etc."
+msgstr ""
+
+#: of xgrammar.matcher.allocate_token_bitmask:1
+msgid ""
+"Allocate the bitmask for the next token prediction. The bitmask is an "
+"int32 tensor on CPU with shape (batch_size, ceil(vocab_size / 32)). Users"
+" who have their own needs to manage CUDA memory can construct the tensor "
+"with get_bitmask_shape and bitmask_dtype themselves."
+msgstr ""
+
+#: of xgrammar.matcher.allocate_token_bitmask:6
+msgid ""
+"The reason why we use int32 instead of uint32 is that old versions of "
+"PyTorch do not support uint32."
+msgstr ""
+
+#: of xgrammar.matcher.allocate_token_bitmask:9
+msgid "The batch size of the bitmask."
+msgstr ""
+
+#: of xgrammar.matcher.allocate_token_bitmask:14
+msgid "**bitmask** -- The shape of the bitmask."
+msgstr ""
+
+#: of xgrammar.matcher.apply_token_bitmask_inplace:1
+msgid ""
+"Apply the bitmask to the logits in-place. The bitmask is a 01 bitwise "
+"compressed tensor, where 0 means the token is masked and 1 means the "
+"token is not masked. It can be generated by allocate_token_bitmask and "
+"filled by fill_next_token_bitmask. After applying the bitmask, the masked"
+" logits will be set to -inf."
+msgstr ""
+
+#: of xgrammar.matcher.apply_token_bitmask_inplace:6
+msgid ""
+"The shape of logits and bitmask should be (batch_size, vocab_size) and "
+"(batch_size, bitmask_size) respectively. bitmask_size = ceil(vocab_size /"
+" 32). The operation is:"
+msgstr ""
+
+#: of xgrammar.matcher.apply_token_bitmask_inplace:16
+msgid ""
+"get_bitmask_value(bitmask, i, j) gets the j-th bit of the i-th row of the"
+" bitmask."
+msgstr ""
+
+#: of xgrammar.matcher.apply_token_bitmask_inplace:18
+msgid ""
+"Indices can be used to specify which logits in the batch to apply the "
+"bitmask to. It is especially useful when there are structured requests "
+"and unstructured requests mixed in the same batch by skipping masking the"
+" logits in the unstructured requests. When specified, the operation will "
+"be"
+msgstr ""
+
+#: of xgrammar.matcher.apply_token_bitmask_inplace:30
+msgid ""
+"The logits and bitmask should be on the same device. If both them are on "
+"CUDA, we launch a CUDA kernel to apply bitmask. If both them are on CPU, "
+"we use a CPU implementation. The CUDA kernel is optimized and should be "
+"preferred."
+msgstr ""
+
+#: of xgrammar.matcher.apply_token_bitmask_inplace:34
+msgid ""
+"In practice, the bitmask is allocated on CPU, and the logits is usually "
+"on GPU, so users should manually copy the bitmask to GPU before calling "
+"this function."
+msgstr ""
+
+#: of xgrammar.matcher.apply_token_bitmask_inplace:37
+msgid "The tensor to apply the bitmask to."
+msgstr ""
+
+#: of xgrammar.matcher.apply_token_bitmask_inplace:39
+msgid "The bitmask to apply."
+msgstr ""
+
+#: of xgrammar.matcher.apply_token_bitmask_inplace:41
+msgid ""
+"A list of indices to specify which logits in the batch to apply the "
+"bitmask to. If None, apply the bitmask to all logits in the batch."
+msgstr ""
+

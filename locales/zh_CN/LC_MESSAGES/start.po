@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, XGrammar Contributors
+# This file is distributed under the same license as the XGrammar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: XGrammar 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-03 18:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../start/install.rst:4
+msgid "Installation"
+msgstr ""
+
+#: ../../start/install.rst:8
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../start/install.rst:10
+msgid ""
+"XGrammar Python Package can be installed directly from a prebuilt "
+"developer package, or built from source."
+msgstr ""
+
+#: ../../start/install.rst:17
+msgid "Option 1. Prebuilt Package"
+msgstr ""
+
+#: ../../start/install.rst:19
+msgid "We provide nightly built pip wheels for XGrammar via pip."
+msgstr ""
+
+#: ../../start/install.rst:22
+msgid ""
+"❗ Whenever using Python, it is highly recommended to use **conda** to "
+"manage an isolated Python environment to avoid missing dependencies, "
+"incompatible versions, and package conflicts. Please make sure your conda"
+" environment has Python and pip installed."
+msgstr ""
+
+#: ../../start/install.rst:31
+msgid "Then you can verify installation in command line:"
+msgstr ""
+
+#: ../../start/install.rst:40
+msgid "CUDA Dependency"
+msgstr ""
+
+#: ../../start/install.rst:42
+msgid ""
+"When using NVIDIA GPUs, please also install these extra dependencies to "
+"enable CUDA support for applying bitmasks:"
+msgstr ""
+
+#: ../../start/install.rst:54
+msgid "Option 2. Build from Source"
+msgstr ""
+
+#: ../../start/install.rst:56
+msgid ""
+"We also provide options to build XGrammar from source. This step is "
+"useful when you want to make modification or obtain a specific version of"
+" XGrammar."
+msgstr ""
+
+#: ../../start/install.rst:60
+msgid ""
+"**Step 1. Set up build dependency.** To build from source, you need to "
+"ensure that the following build dependencies are satisfied:"
+msgstr ""
+
+#: ../../start/install.rst:62
+msgid "CMake >= 3.18"
+msgstr ""
+
+#: ../../start/install.rst:63
+msgid "Git"
+msgstr ""
+
+#: ../../start/install.rst:80
+msgid ""
+"**Step 2. Configure, build and install.** A standard git-based workflow "
+"is recommended to download XGrammar."
+msgstr ""
+
+#: ../../start/install.rst:98
+msgid ""
+"**Step 3. Validate installation.** You may validate if XGrammar is "
+"compiled successfully in command line. You should see the path you used "
+"to build from source with:"
+msgstr ""
+
+#: ../../start/quick_start.rst:4
+msgid "Quick Start"
+msgstr ""
+
+#: ../../start/quick_start.rst:7
+msgid "Example"
+msgstr ""
+
+#: ../../start/quick_start.rst:9
+msgid ""
+"The easiest way of trying out XGrammar is to use the ``transformers`` "
+"library in Python. After :ref:`installing XGrammar <installation>`, run "
+"the following example to see how XGrammar enables structured generation "
+"-- a JSON in this case."
+msgstr ""
+
+#: ../../start/quick_start.rst:15
+msgid "Perparation"
+msgstr ""
+
+#: ../../start/quick_start.rst:16
+msgid "Instantiate a model, a tokenizer, and inputs."
+msgstr ""
+
+#: ../../start/quick_start.rst:41
+msgid "Compile Grammar"
+msgstr ""
+
+#: ../../start/quick_start.rst:43
+msgid "Construct a ``GrammarCompiler`` and compile the grammar."
+msgstr ""
+
+#: ../../start/quick_start.rst:45
+msgid ""
+"The grammar can be a built-in JSON grammar, a JSON schema string, or an "
+"EBNF string. EBNF provides more flexibility for customization. See `GBNF "
+"documentation "
+"<https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md>`_"
+" for specification."
+msgstr ""
+
+#: ../../start/quick_start.rst:61
+msgid "Generate with grammar"
+msgstr ""
+
+#: ../../start/quick_start.rst:63
+msgid "Use logits_processor to generate with grammar."
+msgstr ""
+
+#: ../../start/quick_start.rst:76
+msgid "What to Do Next"
+msgstr ""
+
+#: ../../start/quick_start.rst:78
+msgid ""
+"Check out :ref:`how-to-json-generation` and other How-To guides for the "
+"detailed usage guide of XGrammar."
+msgstr ""
+
+#: ../../start/quick_start.rst:79
+msgid ""
+"Report any problem or ask any question: open new issues in our `GitHub "
+"repo <https://github.com/mlc-ai/xgrammar/issues>`_."
+msgstr ""
+

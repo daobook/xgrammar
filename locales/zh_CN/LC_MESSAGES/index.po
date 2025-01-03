@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, XGrammar Contributors
+# This file is distributed under the same license as the XGrammar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: XGrammar 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-03 18:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../index.rst:17
+msgid "Get Started"
+msgstr "快速上手"
+
+#: ../../index.rst:25
+msgid "How To"
+msgstr "如何做"
+
+#: ../../index.rst:37
+msgid "API Reference"
+msgstr ""
+
+#: ../../index.rst:2
+msgid "👋 Welcome to XGrammar"
+msgstr ""
+
+#: ../../index.rst:4
+msgid "`GitHub <https://github.com/mlc-ai/xgrammar>`_"
+msgstr ""
+
+#: ../../index.rst:8
+msgid ""
+"XGrammar is open-source solution for flexible, portable, and fast "
+"structured generations. The mission of this project is to bring flexible "
+"zero-overhead structure generation everywhere."
+msgstr ""
+
+#: ../../index.rst:12
+msgid "Quick Start"
+msgstr ""
+
+#: ../../index.rst:14
+msgid "Check out :ref:`quick-start` for quick start examples of using XGrammar."
+msgstr ""
+
