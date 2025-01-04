@@ -36,11 +36,11 @@ msgstr ""
 
 #: ../../start/install.rst:17
 msgid "Option 1. Prebuilt Package"
-msgstr ""
+msgstr "选项 1：预构建包"
 
 #: ../../start/install.rst:19
 msgid "We provide nightly built pip wheels for XGrammar via pip."
-msgstr ""
+msgstr "通过 pip 提供 XGrammar 的 nightly 预构建包。"
 
 #: ../../start/install.rst:22
 msgid ""
@@ -49,24 +49,26 @@ msgid ""
 "incompatible versions, and package conflicts. Please make sure your conda"
 " environment has Python and pip installed."
 msgstr ""
+"❗ 每当使用 Python 时，强烈建议使用 **conda** 来管理独立的 Python 环境，以避免缺少依赖、版本不兼容和包冲突的问题。请确保您的 conda 环境中已安装 Python 和 pip。"
 
 #: ../../start/install.rst:31
 msgid "Then you can verify installation in command line:"
-msgstr ""
+msgstr "然后您可以在命令行中验证安装："
 
 #: ../../start/install.rst:40
 msgid "CUDA Dependency"
-msgstr ""
+msgstr "CUDA 依赖"
 
 #: ../../start/install.rst:42
 msgid ""
 "When using NVIDIA GPUs, please also install these extra dependencies to "
 "enable CUDA support for applying bitmasks:"
 msgstr ""
+"当使用 NVIDIA GPU 时，请同时安装这些额外的依赖项以启用 CUDA 支持来应用位掩码："
 
 #: ../../start/install.rst:54
 msgid "Option 2. Build from Source"
-msgstr ""
+msgstr "选项 2：从源代码构建"
 
 #: ../../start/install.rst:56
 msgid ""
@@ -74,12 +76,14 @@ msgid ""
 "useful when you want to make modification or obtain a specific version of"
 " XGrammar."
 msgstr ""
+"还提供了从源代码构建 XGrammar 的选项。当您希望进行修改或获取特定版本的 XGrammar 时，此步骤非常有用。"
 
 #: ../../start/install.rst:60
 msgid ""
 "**Step 1. Set up build dependency.** To build from source, you need to "
 "ensure that the following build dependencies are satisfied:"
 msgstr ""
+"**步骤 1：设置构建依赖项。** 要从源代码构建，您需要确保满足以下构建依赖项："
 
 #: ../../start/install.rst:62
 msgid "CMake >= 3.18"
@@ -94,6 +98,7 @@ msgid ""
 "**Step 2. Configure, build and install.** A standard git-based workflow "
 "is recommended to download XGrammar."
 msgstr ""
+"**步骤 2：配置、构建和安装。** 建议使用基于 git 的标准工作流程来下载 XGrammar。"
 
 #: ../../start/install.rst:98
 msgid ""
@@ -101,14 +106,15 @@ msgid ""
 "compiled successfully in command line. You should see the path you used "
 "to build from source with:"
 msgstr ""
+"**步骤 3：验证安装。** 您可以在命令行中验证 XGrammar 是否成功编译。您应该会看到用于从源代码构建的路径："
 
 #: ../../start/quick_start.rst:4
 msgid "Quick Start"
-msgstr ""
+msgstr "快速上手"
 
 #: ../../start/quick_start.rst:7
 msgid "Example"
-msgstr ""
+msgstr "示例"
 
 #: ../../start/quick_start.rst:9
 msgid ""
@@ -117,14 +123,16 @@ msgid ""
 "the following example to see how XGrammar enables structured generation "
 "-- a JSON in this case."
 msgstr ""
+"尝试 XGrammar 的最简单方法是使用 Python 中的 ``transformers`` 库。"
+"在 :ref:`安装 XGrammar <installation>` 之后，运行以下示例以查看 XGrammar 如何启用结构化生成 —— 在本例中为 JSON。"
 
 #: ../../start/quick_start.rst:15
 msgid "Perparation"
-msgstr ""
+msgstr "准备"
 
 #: ../../start/quick_start.rst:16
 msgid "Instantiate a model, a tokenizer, and inputs."
-msgstr ""
+msgstr "实例化模型、分词器和输入。"
 
 #: ../../start/quick_start.rst:41
 msgid "Compile Grammar"
