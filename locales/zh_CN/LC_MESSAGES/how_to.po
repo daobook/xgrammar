@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../how_to/ebnf_guided_generation.rst:4
 msgid "EBNF-Guided Generation"
-msgstr ""
+msgstr "EBNF引导的生成"
 
 #: ../../how_to/ebnf_guided_generation.rst:6
 msgid ""
@@ -29,6 +29,7 @@ msgid ""
 "use an EBNF grammar to guide the generation, providing more flexibility "
 "for customization."
 msgstr ""
+"XGrammar 支持高效的结构化生成。除了 JSON 之外，你还可以使用 EBNF 语法来指导生成过程，从而提供更大的定制灵活性。"
 
 #: ../../how_to/ebnf_guided_generation.rst:9
 msgid ""
@@ -38,11 +39,14 @@ msgid ""
 "with HF ``transformers`` in :ref:`Try out via HF Transformers <how-to-"
 "ebnf-generation-HF>`."
 msgstr ""
+"首先回顾如何在 LLM 引擎中使用 XGrammar 来实现这一功能，详见 :ref:`LLM引擎中的EBNF引导生成 <how-to-ebnf-generation-engine>`，"
+"随后提供了端到端的示例，展示如何结合 HF 的 ``transformers`` 库使用 XGrammar 进行 JSON 生成，"
+"详见 :ref:`通过HF Transformers尝试 <how-to-ebnf-generation-HF>`。"
 
 #: ../../how_to/ebnf_guided_generation.rst:15
 #: ../../how_to/engine_integration.rst:17 ../../how_to/json_generation.rst:16
 msgid "Install XGrammar"
-msgstr ""
+msgstr "安装 XGrammar"
 
 #: ../../how_to/ebnf_guided_generation.rst:17
 #: ../../how_to/engine_integration.rst:19 ../../how_to/json_generation.rst:18
@@ -51,16 +55,18 @@ msgid ""
 "is always recommended to install it in an isolated conda virtual "
 "environment."
 msgstr ""
+":ref:`XGrammar <installation_prebuilt_package>` 可以通过 pip 安装。建议始终在独立的 conda 虚拟环境中安装它。"
 
 #: ../../how_to/ebnf_guided_generation.rst:24
 msgid "EBNF-Guided Generation in LLM Engines"
-msgstr ""
+msgstr "LLM 引擎中的 EBNF 引导生成"
 
 #: ../../how_to/ebnf_guided_generation.rst:26
 msgid ""
 "In this section, we see how to use XGrammar in an LLM engine to ensure "
 "that the output follows ane EBNF grammar."
 msgstr ""
+"在本节中，将探讨如何在 LLM 引擎中使用 XGrammar，以确保输出遵循 EBNF 语法。"
 
 #: ../../how_to/ebnf_guided_generation.rst:29
 #: ../../how_to/json_generation.rst:30
@@ -68,11 +74,12 @@ msgid ""
 "All code snippets below are actual runnable code as we simulate the LLM "
 "generation."
 msgstr ""
+"以下所有代码片段均为实际可运行的代码，因为模拟了 LLM 生成过程。"
 
 #: ../../how_to/ebnf_guided_generation.rst:31
 #: ../../how_to/engine_integration.rst:31 ../../how_to/json_generation.rst:32
 msgid "First, import necessary libraries for the tutorial."
-msgstr ""
+msgstr "首先，为本教程导入必要的库。"
 
 #: ../../how_to/ebnf_guided_generation.rst:40
 #: ../../how_to/json_generation.rst:41
@@ -81,6 +88,8 @@ msgid ""
 "``xgr.TokenizerInfo``. With the ``tokenizer_info``, instantiate "
 "``xgr.GrammarCompiler`` that will compiler a grammar of your choice."
 msgstr ""
+"接着，从正在使用的大型语言模型（LLM）中提取分词器信息，"
+"使用 ``xgr.TokenizerInfo``。有了 ``tokenizer_info`` 之后，实例化 ``xgr.GrammarCompiler``，它将编译您选择的语法。"
 
 #: ../../how_to/ebnf_guided_generation.rst:56
 msgid ""
@@ -88,6 +97,9 @@ msgid ""
 "(GGML BNF), with the specification `here "
 "<https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md>`__."
 msgstr ""
+"随后，指定 EBNF 语法字符串。目前采用 GBNF 格式"
+"（GGML BNF），其规范可参见 `此处 "
+"<https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md>`__.。"
 
 #: ../../how_to/ebnf_guided_generation.rst:70
 #: ../../how_to/json_generation.rst:97
@@ -97,6 +109,9 @@ msgid ""
 "structured generation. We also allocate a bitmask that will be used to "
 "mask logits."
 msgstr ""
+"利用编译好的语法，可以实例化 ``xgr.GrammarMatcher``，"
+"这是我们与之交互的主要结构，它维护着结构化生成的状态。还会分配位掩码，"
+"该掩码将用于对逻辑单元（logits）进行掩码处理。"
 
 #: ../../how_to/ebnf_guided_generation.rst:80
 #: ../../how_to/json_generation.rst:107
@@ -104,11 +119,12 @@ msgid ""
 "Now we simulate a single-request auto-regressive generation. See :ref"
 ":`how-to-engine-integration` for batched inference."
 msgstr ""
+"现在模拟单请求的自回归生成过程。关于批量推理，请参阅 :ref:`how-to-engine-integration`。"
 
 #: ../../how_to/ebnf_guided_generation.rst:121
 #: ../../how_to/json_generation.rst:148
 msgid "Try out via HF Transformers"
-msgstr ""
+msgstr "尝试通过 HF Transformers 进行实验"
 
 #: ../../how_to/ebnf_guided_generation.rst:123
 #: ../../how_to/json_generation.rst:150
@@ -117,25 +133,26 @@ msgid ""
 "``LogitsProcessor``. Note that this integration mainly aims for "
 "accessibility and may contain extra overhead."
 msgstr ""
+"XGrammar 可以轻松地通过 ``LogitsProcessor`` 与 Hugging Face Transformers 集成。请注意，这种集成主要是为了提升可访问性，可能会包含额外的开销。"
 
 #: ../../how_to/ebnf_guided_generation.rst:126
 #: ../../how_to/json_generation.rst:153
 msgid "First, instantiate a model, a tokenizer, and inputs."
-msgstr ""
+msgstr "首先，实例化模型、分词器以及输入数据。"
 
 #: ../../how_to/ebnf_guided_generation.rst:151
 #: ../../how_to/json_generation.rst:178
 msgid "Then construct a ``GrammarCompiler`` and compile the grammar."
-msgstr ""
+msgstr "然后构建 ``GrammarCompiler`` 并编译语法。"
 
 #: ../../how_to/ebnf_guided_generation.rst:175
 #: ../../how_to/json_generation.rst:196
 msgid "Finally, use ``LogitsProcessor`` to generate with grammar."
-msgstr ""
+msgstr "最后，使用 ``LogitsProcessor`` 结合语法进行生成。"
 
 #: ../../how_to/engine_integration.rst:4
 msgid "Integration with LLM Engine"
-msgstr ""
+msgstr "与 LLM 引擎的集成"
 
 #: ../../how_to/engine_integration.rst:6
 msgid ""
@@ -143,6 +160,7 @@ msgid ""
 " over the key components of XGrammar and how to integrate XGrammar into "
 "an LLM engine."
 msgstr ""
+"XGrammar 实现了高效的结构化生成。在本教程中，将探讨 XGrammar 的关键组件，以及如何将 XGrammar 集成到 LLM 引擎中。"
 
 #: ../../how_to/engine_integration.rst:9
 msgid ""
@@ -151,22 +169,26 @@ msgid ""
 ":ref:`Structured Generation for Batched Inference <how-to-engine-"
 "integration-batched>`."
 msgstr ""
+"首先在 :ref:`高级流程 <how-to-engine-integration-flow>` 中阐述了相关概念。"
+"接着，展示了 XGrammar 如何实现 :ref:`批量推理的结构化生成 <how-to-engine-integration-batched>`。"
 
 #: ../../how_to/engine_integration.rst:13
 msgid ""
 "The code snippets below are actual runnable code as we simulate the LLM "
 "generation."
 msgstr ""
+"以下代码片段是实际可运行的代码，因为模拟了 LLM 的生成过程。"
 
 #: ../../how_to/engine_integration.rst:26
 msgid "High-Level Flow"
-msgstr ""
+msgstr "高级流程"
 
 #: ../../how_to/engine_integration.rst:28
 msgid ""
 "In this section, we go over the key components of XGrammar when "
 "integrating it into an LLM engine for structured generation."
 msgstr ""
+"在本节中，将探讨将 XGrammar 集成到 LLM 引擎以实现结构化生成时的关键组件。"
 
 #: ../../how_to/engine_integration.rst:41
 msgid "xgr.TokenizerInfo"
@@ -182,6 +204,10 @@ msgid ""
 " former being the shape of the model's logits. To be safe, always pass in"
 " the former when instantiating ``xgr.TokenizerInfo``."
 msgstr ""
+"``xgr.TokenizerInfo`` 是针对每个模型的构造，它封装了分词器的信息，包括其所有词汇。"
+"有几种实例化它的方法，最便捷的方式是使用 ``AutoTokenizer``。"
+"请注意，对于某些模型，由于填充的存在， ``AutoConfig.vocab_size`` 可能会大于 ``AutoTokenizer.vocab_size``，前者是模型逻辑单元（logits）的形状。"
+"为了安全起见，在实例化 ``xgr.TokenizerInfo`` 时，始终传入前者。"
 
 #: ../../how_to/engine_integration.rst:61
 msgid "xgr.GrammarCompiler"
@@ -198,6 +224,9 @@ msgid ""
 "multithreading, and ``enable_cache`` (defaults to true) for caching "
 "compiled grammars."
 msgstr ""
+"有了 ``xgr.TokenizerInfo``，就可以实例化 ``xgr.GrammarCompiler``。这是根据模型的分词器信息编译语法的构造。"
+"因此，对于每个模型，你可以持久地使用同一个 ``xgr.GrammarCompiler``，因为它可以为相同的 ``xgr.TokenizerInfo`` 编译不同的语法。"
+"请注意，``compiler`` 的行为可以通过 ``max_threads`` 进行多线程配置，以及通过 ``enable_cache`` （默认为true）来启用或禁用编译语法的缓存。"
 
 #: ../../how_to/engine_integration.rst:76
 msgid "xgr.CompiledGrammar"
@@ -211,6 +240,8 @@ msgid ""
 ":`how-to-ebnf-generation`. Every thing we have seen up to now are per-"
 "model (rather than per-generation)."
 msgstr ""
+"接下来，使用 ``xgr.GrammarCompiler``，可以编译语法，结果是得到 ``xgr.CompiledGrammar``。这里我们使用了内置的 JSON 语法。"
+"对于其他语法，请参阅 :ref:`how-to-json-generation` 和 :ref:`how-to-ebnf-generation`。到目前为止，所看到的一切都是针对每个模型的（而不是每次生成）。"
 
 #: ../../how_to/engine_integration.rst:88
 msgid "xgr.GrammarMatcher"
@@ -224,16 +255,19 @@ msgid ""
 "its own ``xgr.GrammarMatcher`` since each has a different generation "
 "state, as we will see in :ref:`how-to-engine-integration-batched`."
 msgstr ""
+"有了编译好的语法，就可以实例化 ``xgr.GrammarMatcher``。它是 LLM 引擎与之交互的主要构造，用于维护结构化生成的状态。"
+"请注意，每个请求都应该有自己的 ``xgr.GrammarMatcher``，因为每个请求都有不同的生成状态，正如将在 :ref:`how-to-engine-integration-batched` 中看到的那样。"
 
 #: ../../how_to/engine_integration.rst:101
 msgid "Bitmasking Logits in Auto-regressive Generation"
-msgstr ""
+msgstr "自回归生成中的位掩码逻辑单元（Logits）"
 
 #: ../../how_to/engine_integration.rst:103
 msgid ""
 "Now we simulate a single-request auto-regressive generation. See later "
 "section for :ref:`how-to-engine-integration-batched`."
 msgstr ""
+"现在模拟单请求的自回归生成过程。关于批量推理，请参阅后面的 :ref:`how-to-engine-integration-batched` 部分。"
 
 #: ../../how_to/engine_integration.rst:106
 msgid ""
@@ -242,6 +276,7 @@ msgid ""
 " of shape ``(batch_size, vocab_size)``. You can also use your own "
 "implementation for allocating a bitmask."
 msgstr ""
+"首先，使用 ``xgr.allocate_token_bitmask()`` 预分配令牌位掩码，它本质上是形状为 ``(batch_size, vocab_size)`` 的 ``torch.Tensor``。你也可以使用自己的实现来分配位掩码。"
 
 #: ../../how_to/engine_integration.rst:110
 msgid ""
@@ -252,6 +287,8 @@ msgid ""
 "``xgr.apply_token_bitmask_inplace()``, which calls a CUDA kernel if "
 "``logits`` is on CUDA (recommended), otherwise a CPU implementation."
 msgstr ""
+"在每个自回归步骤中，根据匹配器的当前状态使用 ``xgr.GrammarMatcher.fill_next_token_bitmask()`` 填充令牌位掩码。"
+"然后，使用 ``xgr.apply_token_bitmask_inplace()`` 将位掩码应用到模型的逻辑单元（logits）中，如果 ``logits`` 在CUDA上（推荐），则调用 CUDA 内核，否则使用 CPU 实现。"
 
 #: ../../how_to/engine_integration.rst:115
 msgid ""
@@ -261,16 +298,20 @@ msgid ""
 "``xgr.GrammarMatcher.accept_token()``. Finally, use  "
 "``xgr.GrammarMatcher.reset()`` to prepare for the next generation."
 msgstr ""
+"掩码处理后，非法令牌的逻辑单元（logits）被设置为负无穷大，这样就永远不会采样到它们。"
+"采样到令牌后，使用 ``xgr.GrammarMatcher.accept_token()`` 更新 ``xgr.GrammarMatcher`` 的状态。"
+"最后，使用 ``xgr.GrammarMatcher.reset()`` 为下一次生成做准备。"
 
 #: ../../how_to/engine_integration.rst:160
 msgid "Structured Generation for Batched Inference"
-msgstr ""
+msgstr "批量推理的结构化生成"
 
 #: ../../how_to/engine_integration.rst:162
 msgid ""
 "The code snippets above assume a single request generation. This section "
 "demonstrates how the same concept works with batched generation."
 msgstr ""
+"上面的代码片段假设了单请求生成。本节将展示相同的概念如何应用于批量生成。"
 
 #: ../../how_to/engine_integration.rst:165
 msgid ""
@@ -278,6 +319,7 @@ msgid ""
 "``xgr.TokenizerInfo`` and ``xgr.GrammarCompiler``. Say each request needs"
 " to generate a valid JSON."
 msgstr ""
+"首先，按照上述完全相同的步骤为每个模型构造 ``xgr.TokenizerInfo`` 和 ``xgr.GrammarCompiler``。假设每个请求需要生成有效的 JSON。"
 
 #: ../../how_to/engine_integration.rst:188
 msgid ""
@@ -287,6 +329,8 @@ msgid ""
 "here for simplicity, they are all just following the general JSON "
 "grammar."
 msgstr ""
+"现在，需要为批次中的每个请求维护 ``xgr.GrammarMatcher``，因为每个请求都有不同的生成状态。"
+"请注意，批次中的每个请求可以遵循不同的 ``xgr.CompiledGrammar``，但这里为了简单起见，它们都遵循通用的 JSON 语法。"
 
 #: ../../how_to/engine_integration.rst:202
 msgid ""
@@ -297,10 +341,12 @@ msgid ""
 " generation is that, in batched-request generation, each request has its "
 "own ``xgr.GrammarMatcher`` to maintain."
 msgstr ""
+"模拟了批量推理的自回归生成过程。请注意，这里假设两个请求的生成长度相同以简化问题。"
+"但根据你的引擎如何支持批量推理，应该很容易进行推广。与单请求生成的关键区别在于，在批量请求生成中，每个请求都有自己的 ``xgr.GrammarMatcher`` 需要维护。"
 
 #: ../../how_to/json_generation.rst:4
 msgid "JSON Generation"
-msgstr ""
+msgstr "JSON 生成"
 
 #: ../../how_to/json_generation.rst:6
 msgid ""
@@ -309,6 +355,7 @@ msgid ""
 " to ensure that an LLM's output is a valid JSON, or adheres to a "
 "customized JSON schema."
 msgstr ""
+"XGrammar 实现了高效的结构化生成。示例结构是 JSON 和 JSON Schema。在本教程中，将探讨如何使用 XGrammar 来确保 LLM 的输出是有效的 JSON，或遵循自定义的 JSON 模式。"
 
 #: ../../how_to/json_generation.rst:10
 msgid ""
@@ -318,16 +365,19 @@ msgid ""
 "``transformers`` in :ref:`Try out via HF Transformers <how-to-json-"
 "generation-HF>`."
 msgstr ""
+"首先探讨了如何在 LLM 引擎中使用 XGrammar 来实现这一点，在 :ref:`LLM引擎中的JSON生成 <how-to-json-generation-engine>` 中进行了介绍，"
+"然后在 :ref:`通过 HF Transformers 尝试 <how-to-json-generation-HF>` 中提供了使用 XGrammar 与 HF ``transformers`` 的端到端 JSON 生成示例。"
 
 #: ../../how_to/json_generation.rst:25
 msgid "JSON Generation in LLM Engines"
-msgstr ""
+msgstr "LLM引擎中的JSON生成"
 
 #: ../../how_to/json_generation.rst:27
 msgid ""
 "In this section, we see how to use XGrammar in an LLM engine to ensure "
 "that the output is always a valid JSON."
 msgstr ""
+"在本节中，将了解如何在 LLM 引擎中使用 XGrammar 来确保输出始终是有效的 JSON。"
 
 #: ../../how_to/json_generation.rst:57
 msgid ""
@@ -336,10 +386,11 @@ msgid ""
 "Pydantic model, or from a JSON schema string. Pick one one of the three "
 "below to run."
 msgstr ""
+"对于 JSON 生成，通常有三种编译语法的选项：使用内置的 JSON 语法，通过 Pydantic 模型指定 JSON 模式，或从 JSON 模式字符串中编译。从以下三种中选择一种来运行。"
 
 #: ../../how_to/portable_api.rst:4
 msgid "Portable API"
-msgstr ""
+msgstr "便携式API"
 
 #: ../../how_to/portable_api.rst:6
 msgid ""
@@ -347,6 +398,7 @@ msgid ""
 "integrated into many platforms. Besides the C++ backend, we also provide "
 "ready-to-use Python and JavaScript/TypeScript libraries."
 msgstr ""
+"XGrammar 采用轻量级的 C++ core 实现，可以集成到多种平台中。除了 C++ 后端，还提供了即用型的 Python 和 JavaScript/TypeScript 库。"
 
 #: ../../how_to/portable_api.rst:9
 msgid ""
@@ -354,10 +406,11 @@ msgid ""
 "<apixgrammar>`. Below we take a high-level view of the Javascript "
 "library."
 msgstr ""
+"对于 Python 库，只需查看 :ref:`Python API参考 <apixgrammar>`。下面从高层次上了解一下 JavaScript 库。"
 
 #: ../../how_to/portable_api.rst:15
 msgid "Javascript SDK for Web-based LLMs"
-msgstr ""
+msgstr "面向基于 Web 的 LLM 的 Javascript SDK"
 
 #: ../../how_to/portable_api.rst:17
 msgid ""
@@ -366,10 +419,12 @@ msgid ""
 "integrated with XGrammar's JS SDK, ``web-xgrammar``. It uses `emscripten "
 "<https://emscripten.org/>`__ to compile the C++ code into WebAssembly."
 msgstr ""
+"JS SDK 设计用于在浏览器中运行的 LLM，包括 `WebLLM <https://github.com/mlc-ai/web-llm>`__。"
+"WebLLM 与 XGrammar的 JS SDK ``web-xgrammar`` 集成。它使用 `emscripten <https://emscripten.org/>`__ 将 C++ 代码编译成 WebAssembly。"
 
 #: ../../how_to/portable_api.rst:22
 msgid ""
 "To use this SDK, simply run ``npm install @mlc-ai/web-xgrammar``. For "
 "more, see `here <https://github.com/mlc-ai/xgrammar/tree/main/web>`__."
 msgstr ""
-
+"要使用这个 SDK，只需运行 ``npm install @mlc-ai/web-xgrammar``。更多信息，请参见 `这里 <https://github.com/mlc-ai/xgrammar/tree/main/web>`__。"

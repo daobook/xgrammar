@@ -136,11 +136,11 @@ msgstr "实例化模型、分词器和输入。"
 
 #: ../../start/quick_start.rst:41
 msgid "Compile Grammar"
-msgstr ""
+msgstr "编译语法"
 
 #: ../../start/quick_start.rst:43
 msgid "Construct a ``GrammarCompiler`` and compile the grammar."
-msgstr ""
+msgstr "构建 ``GrammarCompiler`` 并编译语法。"
 
 #: ../../start/quick_start.rst:45
 msgid ""
@@ -150,28 +150,31 @@ msgid ""
 "<https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md>`_"
 " for specification."
 msgstr ""
+"语法可以是内置的 JSON 语法、JSON 模式字符串或EBNF字符串。"
+"EBNF 提供了更高的自定义灵活性。有关规范，请参阅 `GBNF文档 <https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md>`_。"
 
 #: ../../start/quick_start.rst:61
 msgid "Generate with grammar"
-msgstr ""
+msgstr "使用语法生成"
 
 #: ../../start/quick_start.rst:63
 msgid "Use logits_processor to generate with grammar."
-msgstr ""
+msgstr "使用 `logits_processor` 结合语法进行生成。"
 
 #: ../../start/quick_start.rst:76
 msgid "What to Do Next"
-msgstr ""
+msgstr "下一步该做什么"
 
 #: ../../start/quick_start.rst:78
 msgid ""
 "Check out :ref:`how-to-json-generation` and other How-To guides for the "
 "detailed usage guide of XGrammar."
 msgstr ""
+"请查看 :ref:`how-to-json-generation` 和其他操作指南，了解 XGrammar 的详细使用说明。"
 
 #: ../../start/quick_start.rst:79
 msgid ""
 "Report any problem or ask any question: open new issues in our `GitHub "
 "repo <https://github.com/mlc-ai/xgrammar/issues>`_."
 msgstr ""
-
+"报告任何问题或提出任何疑问：请在我们的 `GitHub 仓库 <https://github.com/mlc-ai/xgrammar/issues>`_ 中提交新问题。"

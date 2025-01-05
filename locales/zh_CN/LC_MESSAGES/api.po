@@ -44,6 +44,7 @@ msgid ""
 "This class represents a grammar object in XGrammar, and can be used later"
 " in the grammar-guided generation."
 msgstr ""
+"这个类代表了XGrammar中的语法对象，可以在之后的语法引导生成中使用。"
 
 #: of xgrammar:1:<autosummary>:1
 msgid ""
